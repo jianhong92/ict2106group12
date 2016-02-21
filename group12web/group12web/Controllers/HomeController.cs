@@ -30,6 +30,12 @@ namespace group12web.Controllers
             return View();
         }
 
+        public ActionResult Weather()
+        {
+            ViewBag.Message = "Weather page";
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Upload(HttpPostedFileBase upload)
