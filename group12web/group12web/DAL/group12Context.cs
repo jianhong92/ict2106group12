@@ -15,6 +15,8 @@ namespace group12web.DAL
 
         }
         public DbSet<Weather> Weathers { get; set; }
+
+        public DbSet<TrafficAccident> TrafficAccidents { get; set; }
     }
     
 }
