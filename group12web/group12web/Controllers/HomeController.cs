@@ -1,4 +1,5 @@
-﻿using group12web.Models;
+﻿using group12web.DAL;
+using group12web.Models;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -11,6 +12,8 @@ namespace group12web.Controllers
 {
     public class HomeController : Controller
     {
+        private WeatherGateway weatherGateway = new WeatherGateway();
+
         public ActionResult Index()
         {
             return View();
@@ -63,11 +66,10 @@ namespace group12web.Controllers
                             weather.Rainfall = decimal.Parse(row[4]);
 
                             //Add record into DB
-                            //dbContext.Weathers.Add(weather);
-                            //dbContext.SaveChanges();
+                            weatherGateway.Insert(weather);
                         }
-                        ViewBag.csv = "<p>" + row[1] + "</p>";
-                        return View();
+                        
+                        return RedirectToAction("../Weathers");
                     }
                     else
                     {

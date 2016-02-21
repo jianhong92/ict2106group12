@@ -187,6 +187,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-group12web-20160216065756.mdf" />
+    <Content Include="App_Data\aspnet-group12web-20160216065756_log.ldf">
+      <DependentUpon>aspnet-group12web-20160216065756.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -249,9 +253,7 @@
     <Content Include="Views\Weathers\Edit.cshtml" />
     <Content Include="Views\Weathers\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
