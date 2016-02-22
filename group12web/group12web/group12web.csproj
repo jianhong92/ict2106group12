@@ -170,12 +170,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\TrafficAccidentsController.cs" />
     <Compile Include="Controllers\WeathersController.cs" />
     <Compile Include="DAL\DataGateway.cs" />
     <Compile Include="DAL\group12Context.cs" />
     <Compile Include="DAL\IDataGateway.cs" />
-    <Compile Include="DAL\TrafficAccidentsGateway.cs" />
     <Compile Include="DAL\WeatherGateway.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -195,7 +193,6 @@
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\citytraffic.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -255,11 +252,7 @@
     <Content Include="Views\Weathers\Details.cshtml" />
     <Content Include="Views\Weathers\Edit.cshtml" />
     <Content Include="Views\Weathers\Index.cshtml" />
-    <Content Include="Views\TrafficAccidents\Create.cshtml" />
-    <Content Include="Views\TrafficAccidents\Delete.cshtml" />
-    <Content Include="Views\TrafficAccidents\Details.cshtml" />
-    <Content Include="Views\TrafficAccidents\Edit.cshtml" />
-    <Content Include="Views\TrafficAccidents\Index.cshtml" />
+    <Content Include="Views\Weathers\Chart.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

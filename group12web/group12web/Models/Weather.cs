@@ -15,4 +15,11 @@ namespace group12web.Models
         public DateTime Date { get; set; }
         public decimal Rainfall { get; set; }
     }
+
+    public class WeatherChart
+    {
+        public string Station { get; set; }
+        public string Date { get; set; }
+        public decimal Rainfall { get; set; }
+    }
 }

@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Chart";
+}
+
+<h2>Chart</h2>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script type="text/javascript">
+    google.load("visualization", "1", { packages: ["bar"] });
+    $(function () {
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            contentType: 'application/json',
+            url: '@Url.Action("BarChart")',
+            data: '{}',
+            success: function (chartsdata) {
+                var data = new google.visualization.DataTable();
+
+                //data.addColumn('string', 'Station');
+                data.addColumn('string', 'Date');
+                data.addColumn('number', 'RainFall');
+
+                for (var i = 0; i < chartsdata.length; i++) {
+                    data.addRow([chartsdata[i].Date, chartsdata[i].Rainfall]);
+                }
+
+                var chart = new google.charts.Bar(document.getElementById('chartdiv'));
+
+                chart.draw(data,
+                {
+                    title: "Show Google Chart in ASP.NET",
+                    position: "top",
+                    fontsize: "14px",
+                    chartArea: { width: '50%' },
+                });
+            },
+            error: function () {
+                alert("Error loading data! Please try again.");
+            }
+        });
+    })
+</script>
+
+<div id="chartdiv"></div>

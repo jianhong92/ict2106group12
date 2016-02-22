@@ -47,11 +47,5 @@ namespace group12web.DAL
         {
             db.SaveChanges();
         }
-
-
-
-
-
-
     }
 }

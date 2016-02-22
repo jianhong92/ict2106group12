@@ -124,5 +124,17 @@ namespace group12web.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Chart()
+        {
+            return View();
+        }
+
+        public JsonResult BarChart()
+        {
+            WeatherGateway chart = new WeatherGateway();
+
+            return Json(chart.Chart(), JsonRequestBehavior.AllowGet);
+        }
     }
 }
